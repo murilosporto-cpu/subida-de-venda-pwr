@@ -55,7 +55,7 @@
             </div>
             <div class="mt-4 md:mt-0 text-left md:text-right bg-white p-3 rounded-lg shadow-sm border border-gray-100">
                 <p class="text-xs text-gray-400">Última atualização</p>
-                <p class="text-sm font-semibold text-slate-800">30/08/2026 às 22:54:32</p>
+                <p class="text-sm font-semibold text-slate-800">30/08/2026 às 22:56:36</p>
                 <p class="text-xs text-gray-500 mt-1">Período analisado: <span class="font-medium text-slate-700">01/08/2026 a 29/08/2026</span></p>
             </div>
         </header>
@@ -332,8 +332,8 @@
                 </div>
                 
                 <div style="margin-bottom: 16px; background-color: #f1f5f9; padding: 10px 14px; border-radius: 6px;" class="flex justify-between items-center text-xs text-slate-600">
-                    <div><strong>Filtro ativo:</strong> \${filterDescription}</div>
-                    <div><strong>Atualizado em:</strong> \${new Date().toLocaleDateString('pt-BR')} \${new Date().toLocaleTimeString('pt-BR')}</div>
+                    <div><strong>Filtro ativo:</strong> ${filterDescription}</div>
+                    <div><strong>Atualizado em:</strong> ${new Date().toLocaleDateString('pt-BR')} ${new Date().toLocaleTimeString('pt-BR')}</div>
                 </div>
 
                 <table style="width: 100%; border-collapse: collapse; background-color: white; border-radius: 6px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
@@ -347,7 +347,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        \${criticalItems.map((item, idx) => 
+                        ${criticalItems.map((item, idx) => 
                             '<tr style="border-bottom: 1px solid #e2e8f0; font-size: 13px; background-color: ' + (idx % 2 === 0 ? '#ffffff' : '#f8fafc') + ';">' +
                                 '<td style="padding: 12px 16px; font-weight: 600; color: #1e293b;">' + item.id + '</td>' +
                                 '<td style="padding: 12px 16px; color: #334155;">' + item.name + '</td>' +
