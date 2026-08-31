@@ -27,6 +27,8 @@ logging.basicConfig(
 # Cria pastas necessárias
 os.makedirs("screenshots", exist_ok=True)
 os.makedirs("reports", exist_ok=True)
+os.makedirs("novos arquivos", exist_ok=True)
+os.makedirs("arquivos processados", exist_ok=True)
 
 # Credenciais e Configurações
 USER = os.getenv("DOMINOS_PWR_USER")
@@ -477,9 +479,9 @@ def generate_html_dashboard(yesterday_missing, monthly_missing, store_mapping, b
 </body>
 </html>
 """
-    with open("painel_vendas.html", "w", encoding="utf-8") as f:
+    with open("index.html", "w", encoding="utf-8") as f:
         f.write(html_template)
-    logging.info("Painel HTML de vendas gerado com sucesso em painel_vendas.html")
+    logging.info("Painel HTML de vendas gerado com sucesso em index.html")
 
 async def wait_for_loading_to_finish(page):
     """
@@ -504,6 +506,41 @@ async def wait_for_loading_to_finish(page):
             pass
             
     await page.wait_for_timeout(1500) # Margem de segurança pós-carregamento
+
+def git_push_update():
+    """
+    Realiza o commit e push das atualizações do painel para o GitHub de forma automatizada.
+    """
+    logging.info("Iniciando push automático das atualizações para o GitHub...")
+    try:
+        import subprocess
+        # 1. Adiciona os arquivos
+        subprocess.run(["git", "add", "index.html", "reports/"], check=True)
+        # Se painel_vendas.html ainda existir no git, removemos
+        try:
+            subprocess.run(["git", "rm", "painel_vendas.html"], check=False, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+            if os.path.exists("painel_vendas.html"):
+                os.remove("painel_vendas.html")
+        except Exception:
+            pass
+        # 2. Faz o commit (sem travar caso não haja mudanças)
+        commit_res = subprocess.run(
+            ["git", "commit", "-m", f"Auto-update sales dashboard - {datetime.now().strftime('%d/%m/%Y %H:%M:%S')}"],
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            text=True
+        )
+        if "nothing to commit" in commit_res.stdout or "nada para comitar" in commit_res.stdout or "nothing added to commit" in commit_res.stdout:
+            logging.info("Nenhuma alteração detectada para comitar no Git.")
+            return True
+            
+        # 3. Faz o push
+        subprocess.run(["git", "push"], check=True)
+        logging.info("Atualizações enviadas com sucesso para o GitHub!")
+        return True
+    except Exception as e:
+        logging.error(f"Falha ao enviar atualizações para o GitHub: {e}")
+        return False
 
 async def run_automation():
     if not USER or USER == "seu_usuario_aqui" or not PASSWORD or PASSWORD == "sua_senha_aqui":
@@ -670,6 +707,9 @@ async def run_automation():
             # --- GERAR RELATÓRIO/PAINEL HTML ---
             generate_html_dashboard(stores_missing_yesterday, stores_missing_month, store_mapping, begin_date_str, end_date_str, total_stores_count)
             
+            # --- PUSH AUTOMÁTICO PARA O GITHUB ---
+            git_push_update()
+            
             return True
             
         except Exception as e:
@@ -683,5 +723,129 @@ async def run_automation():
             await browser.close()
             logging.info("Navegador fechado.")
 
+def parse_exported_excel(file_path):
+    """
+    Lê a planilha exportada do PWR e retorna um mapeamento de ID da loja para dias sem subir vendas.
+    """
+    wb = openpyxl.load_workbook(file_path, data_only=True)
+    sheet = wb.active
+    data = {}
+    for row in sheet.iter_rows(values_only=True):
+        if row and row[0] is not None:
+            val_str = str(row[0]).strip()
+            if val_str.isdigit():
+                store_id = val_str
+                col_e_val = str(row[1]).strip() if row[1] is not None else ""
+                days_missing = int(col_e_val) if col_e_val.isdigit() else 0
+                data[store_id] = days_missing
+    return data
+
+def run_local_processing():
+    """
+    Processa os arquivos ontem.xlsx e mes.xlsx baixados manualmente na pasta 'novos arquivos',
+    gerando o relatório, atualizando o painel HTML e enviando para o GitHub.
+    """
+    logging.info("Iniciando processamento manual com arquivos locais...")
+    
+    path_ontem = os.path.join("novos arquivos", "ontem.xlsx")
+    path_mes = os.path.join("novos arquivos", "mes.xlsx")
+    
+    if not os.path.exists(path_ontem) or not os.path.exists(path_mes):
+        logging.error("Erro: Arquivos 'ontem.xlsx' e/ou 'mes.xlsx' não encontrados na pasta 'novos arquivos'!")
+        logging.error("Por favor, baixe os relatórios do PWR e salve-os nessa pasta com esses nomes exatos.")
+        sys.exit(1)
+        
+    # Carregar planilhas de mapeamento
+    store_mapping = load_store_mappings()
+    
+    # Processar ontem.xlsx
+    try:
+        yesterday_data = parse_exported_excel(path_ontem)
+        logging.info(f"Dados de ontem processados. Lojas encontradas: {len(yesterday_data)}")
+    except Exception as e:
+        logging.error(f"Erro ao processar ontem.xlsx: {e}")
+        sys.exit(1)
+        
+    # Processar mes.xlsx
+    try:
+        monthly_data = parse_exported_excel(path_mes)
+        logging.info(f"Dados do mês processados. Lojas encontradas: {len(monthly_data)}")
+    except Exception as e:
+        logging.error(f"Erro ao processar mes.xlsx: {e}")
+        sys.exit(1)
+        
+    # Calcular datas para o relatório (referência: ontem)
+    today = datetime.now()
+    yesterday = today - timedelta(days=1)
+    date_suffix = yesterday.strftime("%Y_%m_%d")
+    begin_date_str = yesterday.strftime("01/%m/%Y")
+    end_date_str = yesterday.strftime("%d/%m/%Y")
+    
+    # Identificar pendências
+    stores_missing_yesterday = [store for store, days in yesterday_data.items() if days >= 1]
+    stores_missing_month = {store: days for store, days in monthly_data.items() if days >= 1}
+    total_stores_count = len(yesterday_data)
+    
+    # Gerar Relatório TXT
+    report_lines = []
+    report_lines.append("="*80)
+    report_lines.append(f"RELATÓRIO MANUAL DE VERIFICAÇÃO DE VENDAS - {datetime.now().strftime('%d/%m/%Y %H:%M:%S')}")
+    report_lines.append("="*80)
+    report_lines.append(f"Período Mensal Analisado: {begin_date_str} a {end_date_str}")
+    report_lines.append(f"Data de Ontem (D-1): {end_date_str}")
+    report_lines.append(f"Total de Lojas Analisadas: {total_stores_count}")
+    report_lines.append("-"*80)
+    
+    report_lines.append("\n[MOVIMENTO 1] VERIFICAÇÃO DE ONTEM (D-1):")
+    if not stores_missing_yesterday:
+        report_lines.append("-> SUCESSO: Todas as lojas subiram as vendas de ontem com sucesso!")
+    else:
+        report_lines.append(f"-> ALERTA: {len(stores_missing_yesterday)} loja(s) NÃO subiram as vendas de ontem:")
+        for store in sorted(stores_missing_yesterday):
+            meta = store_mapping.get(store, {"name": "N/A", "consultant": "N/A", "type": "N/A"})
+            report_lines.append(f"   - Loja {store} | {meta['name']} | Consultor: {meta['consultant']} | ({meta['type']})")
+            
+    report_lines.append("\n[MOVIMENTO 2] VERIFICAÇÃO ACUMULADA DO MÊS (Dia 1 até Ontem):")
+    stores_missing_month_list = sorted(stores_missing_month.items(), key=lambda x: x[1], reverse=True)
+    if not stores_missing_month_list:
+        report_lines.append("-> SUCESSO: Nenhuma loja possui pendências de subida neste mês.")
+    else:
+        report_lines.append(f"-> ALERTA: {len(stores_missing_month_list)} loja(s) possuem dias sem vendas acumulados no mês:")
+        for store, days in stores_missing_month_list:
+            meta = store_mapping.get(store, {"name": "N/A", "consultant": "N/A", "type": "N/A"})
+            report_lines.append(f"   - Loja {store} | {meta['name']} | Consultor: {meta['consultant']} | ({meta['type']}) -> {days} dia(s) sem subir vendas")
+            
+    report_lines.append("\n" + "="*80)
+    report_content = "\n".join(report_lines)
+    
+    # Salvar Relatório TXT
+    report_path = f"reports/relatorio_{date_suffix}.txt"
+    with open(report_path, "w", encoding="utf-8") as f:
+        f.write(report_content)
+    logging.info(f"Relatório manual TXT salvo em {report_path}")
+    print(report_content)
+    
+    # Gerar Painel HTML index.html
+    generate_html_dashboard(stores_missing_yesterday, stores_missing_month, store_mapping, begin_date_str, end_date_str, total_stores_count)
+    
+    # Enviar para o GitHub
+    git_push_update()
+    
+    # Mover arquivos para processados com timestamp
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    dest_ontem = os.path.join("arquivos processados", f"ontem_{timestamp}.xlsx")
+    dest_mes = os.path.join("arquivos processados", f"mes_{timestamp}.xlsx")
+    
+    try:
+        import shutil
+        shutil.move(path_ontem, dest_ontem)
+        shutil.move(path_mes, dest_mes)
+        logging.info("Arquivos Excel movidos com sucesso para a pasta 'arquivos processados'.")
+    except Exception as e:
+        logging.error(f"Erro ao arquivar os arquivos processados: {e}")
+
 if __name__ == "__main__":
-    asyncio.run(run_automation())
+    if len(sys.argv) > 1 and sys.argv[1] in ["--local", "-l"]:
+        run_local_processing()
+    else:
+        asyncio.run(run_automation())

@@ -25,3 +25,8 @@ login_page.html
 # IDEs
 .vscode/
 .idea/
+
+# Pastas de processamento manual de planilhas
+novos arquivos/
+arquivos processados/
+
