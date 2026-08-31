@@ -27,6 +27,8 @@ login_page.html
 .idea/
 
 # Pastas de processamento manual de planilhas
-novos arquivos/
-arquivos processados/
+novos arquivos/*
+!novos arquivos/.gitkeep
+arquivos processados/*
+!arquivos processados/.gitkeep
 
