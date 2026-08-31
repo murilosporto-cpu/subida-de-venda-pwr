@@ -1,5 +1,5 @@
 ================================================================================
-RELATÓRIO MANUAL DE VERIFICAÇÃO DE VENDAS - 31/08/2026 13:01:04
+RELATÓRIO MANUAL DE VERIFICAÇÃO DE VENDAS - 31/08/2026 18:33:00
 ================================================================================
 Período Mensal Analisado: 01/08/2026 a 30/08/2026
 Data de Ontem (D-1): 30/08/2026
@@ -54,8 +54,7 @@ Total de Lojas Analisadas: 207
    - Loja 19962 | DOMINOS ARARUAMA | Consultor: MUNIZ | (Franquia)
 
 [MOVIMENTO 2] VERIFICAÇÃO ACUMULADA DO MÊS (Dia 1 até Ontem):
--> ALERTA: 45 loja(s) possuem dias sem vendas acumulados no mês:
-   - Loja 215 | N/A | Consultor: N/A | (N/A) -> 666 dia(s) sem subir vendas
+-> ALERTA: 44 loja(s) possuem dias sem vendas acumulados no mês:
    - Loja 19843 | DOMINOS MANAUS 3 | Consultor: MARÍLIA | (Franquia) -> 30 dia(s) sem subir vendas
    - Loja 19562 | PRADO | Consultor: Silvanira | (Própria) -> 23 dia(s) sem subir vendas
    - Loja 19602 | DOMINOS CAMPO GRANDE | Consultor: MURILO | (Franquia) -> 11 dia(s) sem subir vendas
@@ -71,7 +70,6 @@ Total de Lojas Analisadas: 207
    - Loja 19962 | DOMINOS ARARUAMA | Consultor: MUNIZ | (Franquia) -> 4 dia(s) sem subir vendas
    - Loja 19515 | CATETE | Consultor: Erick | (Própria) -> 3 dia(s) sem subir vendas
    - Loja 19579 | DOMINOS VILA ANDRADE | Consultor: PRISCILA | (Franquia) -> 3 dia(s) sem subir vendas
-   - Loja 19730 | DOMINOS CUIABA | Consultor: MURILO | (Franquia) -> 2 dia(s) sem subir vendas
    - Loja 19513 | DOMINOS ICARAI | Consultor: ALAN | (Franquia) -> 1 dia(s) sem subir vendas
    - Loja 19521 | DOMINOS CENTRO | Consultor: ALAN | (Franquia) -> 1 dia(s) sem subir vendas
    - Loja 19546 | DOMINOS JUVEVE | Consultor: ALAN | (Franquia) -> 1 dia(s) sem subir vendas
@@ -87,6 +85,7 @@ Total de Lojas Analisadas: 207
    - Loja 19657 | DOMINOS CABO FRIO | Consultor: MUNIZ | (Franquia) -> 1 dia(s) sem subir vendas
    - Loja 19694 | DOMINOS BARRA MANSA | Consultor: ALAN | (Franquia) -> 1 dia(s) sem subir vendas
    - Loja 19706 | DOMINOS BESSA | Consultor: FERNANDO NETO | (Franquia) -> 1 dia(s) sem subir vendas
+   - Loja 19730 | DOMINOS CUIABA | Consultor: MURILO | (Franquia) -> 1 dia(s) sem subir vendas
    - Loja 19832 | DOMINOS RIBEIRÃO PRETO | Consultor: ERICK APARECIDO | (Franquia) -> 1 dia(s) sem subir vendas
    - Loja 19872 | DOMINOS GUARAPARI CENTRO | Consultor: MUNIZ | (Franquia) -> 1 dia(s) sem subir vendas
    - Loja 19890 | INTERLAGOS | Consultor: PRISCILA | (Franquia) -> 1 dia(s) sem subir vendas
