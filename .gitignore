@@ -1,0 +1,27 @@
+# Ambientes virtuais
+.venv/
+env/
+venv/
+ENV/
+
+# Credenciais e configurações locais
+.env
+
+# Logs do Python e da automação
+*.log
+pwr_sales_check.log
+
+# Diretórios de builds e cache
+__pycache__/
+*.pyc
+
+# Capturas de tela locais
+screenshots/
+erro_execucao.png
+erro_login.png
+login_page.png
+login_page.html
+
+# IDEs
+.vscode/
+.idea/

@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PWR Domino's - Painel de Subida de Vendas</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMzMuMjIgMzMzLjIyIj4KICA8ZGVmcz4KICAgIDxzdHlsZT4KICAgICAgLmNscy0xIHsKICAgICAgICBmaWxsOiAjZmZmOwogICAgICB9CgogICAgICAuY2xzLTIgewogICAgICAgIGZpbGw6IHJlZDsKICAgICAgfQoKICAgICAgLmNscy0zIHsKICAgICAgICBmaWxsOiAjMDA5MGUyOwogICAgICB9CiAgICA8L3N0eWxlPgogIDwvZGVmcz4KICA8cGF0aCBjbGFzcz0iY2xzLTEiIGQ9Ik0yMDguNTEsNS45MmwtOTguMTEsOTguMTEtNi4zNiw2LjM2TDUuOTIsMjA4LjUxYy03LjksNy45LTcuOSwyMC43NCwwLDI4LjY0bDkwLjE2LDkwLjE2YzcuOSw3LjksMjAuNzQsNy45LDI4LjY0LDBsOTguMTEtOTguMTEsNi4zNi02LjM2LDk4LjExLTk4LjExYzcuOS03LjksNy45LTIwLjc0LDAtMjguNjRMMjM3LjE1LDUuOTJjLTcuOS03LjktMjAuNzQtNy45LTI4LjY0LDBaIi8+CiAgPHBhdGggY2xhc3M9ImNscy0yIiBkPSJNMjE0Ljg3LDEyLjI5bC05OC4xMSw5OC4xMSwxMDYuMDcsMTA2LjA3LDk4LjExLTk4LjExYzQuMzktNC4zOSw0LjM5LTExLjUyLDAtMTUuOTFMMjMwLjc4LDEyLjI5Yy00LjM5LTQuMzktMTEuNTItNC4zOS0xNS45MSwwWk0yNDkuMDYsMTEwLjM5YzAsNy4yNC0yLjk0LDEzLjgtNy43LDE4LjUzLTQuNzUsNC43NS0xMS4yOSw3LjctMTguNTMsNy43LTcuMjQsMC0xMy44LTIuOTgtMTguNTMtNy43cy03LjctMTEuMjktNy43LTE4LjUzYzAtNy4yNCwyLjk0LTEzLjc3LDcuNjctMTguNTMsNC43NS00Ljc1LDExLjI5LTcuNywxOC41Ni03LjdzMTMuNzcsMi45NCwxOC41Myw3LjcsNy43LDExLjI5LDcuNywxOC41M1oiLz4KICA8cGF0aCBjbGFzcz0iY2xzLTMiIGQ9Ik0xMi4yOSwyMTQuODdjLTQuMzksNC4zOS00LjM5LDExLjUyLDAsMTUuOTFsOTAuMTYsOTAuMTZjNC4zOSw0LjM5LDExLjUyLDQuMzksMTUuOTEsMGw5OC4xMS05OC4xMS0xMDYuMDctMTA2LjA3TDEyLjI5LDIxNC44N1pNOTkuNDgsMjIyLjgyYzAsNy4yNC0yLjk0LDEzLjgtNy43LDE4LjUzLTQuNzUsNC43NS0xMS4yOSw3LjctMTguNTMsNy43LTcuMjQsMC0xMy44LTIuOTgtMTguNTMtNy43LTQuNzUtNC43NS03LjctMTEuMjktNy43LTE4LjUzLDAtNy4yNCwyLjk0LTEzLjc3LDcuNjctMTguNTMsNC43NS00Ljc1LDExLjI5LTcuNywxOC41Ni03LjcsNy4yNCwwLDEzLjc3LDIuOTQsMTguNTMsNy43LDQuNzIsNC43Miw3LjcsMTEuMjksNy43LDE4LjUzWk0xNzMuNzYsMjIyLjc3YzAsNy4yNC0yLjk0LDEzLjgtNy43LDE4LjUzLTQuNzUsNC43NS0xMS4yOSw3LjctMTguNTMsNy43LTcuMjQsMC0xMy44LTIuOTgtMTguNTMtNy43cy03LjctMTEuMjktNy43LTE4LjUzYzAtNy4yNCwyLjk0LTEzLjc3LDcuNjctMTguNTMsNC43NS00Ljc1LDExLjI5LTcuNywxOC41Ni03LjcsNy4yNCwwLDEzLjc3LDIuOTQsMTguNTMsNy43LDQuNzIsNC43Miw3LjcsMTEuMjksNy43LDE4LjUzWiIvPgogIDxwYXRoIGNsYXNzPSJjbHMtMyIgZD0iTTE0Ny45LDMxMy40OWMtMy41MiwwLTYuNSwyLjc0LTYuNSw2LjQ2czIuOTgsNi41LDYuNSw2LjUsNi40Ni0yLjc0LDYuNDYtNi41LTIuOTgtNi40Ni02LjQ2LTYuNDZaTTE0Ny45LDMyNS40Yy0yLjk2LDAtNS4yNi0yLjI5LTUuMjYtNS40NXMyLjI5LTUuNDEsNS4yNi01LjQxLDUuMjIsMi4zMiw1LjIyLDUuNDEtMi4yOSw1LjQ1LTUuMjIsNS40NVpNMTUwLjg1LDMxOC4zNmMwLTEuNDctLjg2LTIuMTMtMi42Mi0yLjEzaC0yLjgzdjcuNDhoMS4xNHYtMy4yNWgxLjI3bDEuOTYsMy4yNWgxLjI0bC0yLjEtMy4yOGMxLjEtLjE0LDEuOTMtLjcyLDEuOTMtMi4wNlpNMTQ2LjU0LDMxOS41MXYtMi4zNGgxLjUzYzEuMjksMCwxLjY0LjQsMS42NCwxLjEyLDAsLjgyLS40NSwxLjIyLTEuODMsMS4yMmgtMS4zNFoiLz4KPC9zdmc+">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen text-gray-800">
+    <div class="max-w-7xl mx-auto px-4 py-8">
+        
+        <!-- Header -->
+        <header class="flex flex-col md:flex-row md:items-center md:justify-between pb-6 mb-8 border-b border-gray-200">
+            <div>
+                <div class="flex items-center space-x-3 mb-2">
+                    <div class="h-10 w-auto flex items-center">
+                        <svg class="h-10 w-auto" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 646.29 134.38">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        fill: red;
+      }
+
+      .cls-3 {
+        fill: #0090e2;
+      }
+    </style>
+  </defs>
+  <g>
+    <path class="cls-3" d="M174.89,45.47h-31.24v84.92h31.24c23.45,0,42.46-19.01,42.46-42.46s-19.01-42.46-42.46-42.46ZM173.56,107.36h-5.27v-38.84h5.27c10.73,0,19.42,8.7,19.42,19.42s-8.7,19.42-19.42,19.42ZM365,130.4v-34.59c0-3.15-2.56-5.71-5.71-5.71s-5.71,2.56-5.71,5.71v34.59h-24.26v-34.59c0-3.15-2.56-5.71-5.71-5.71s-5.71,2.56-5.71,5.71v34.59h-24.26v-61.88h14.99l6.46,6.46c3.96-5.17,10.08-8.23,16.59-8.29.07,0,.14,0,.21,0,6.31,0,12.29,2.81,16.31,7.68,4.48-4.9,10.81-7.67,17.42-7.67,12.96,0,23.48,10.46,23.58,23.41l.04,40.3h-24.26ZM287.5,99.45c0,18.09-14.66,32.75-32.75,32.75s-32.75-14.66-32.75-32.75,14.66-32.75,32.75-32.75,32.75,14.66,32.75,32.75ZM265.8,99.46c0-2.83-1.08-5.66-3.23-7.81-2.16-2.15-5-3.23-7.83-3.23s-5.66,1.08-7.81,3.23c-2.16,2.16-3.23,5-3.23,7.83s1.08,5.66,3.23,7.81c2.16,2.15,4.99,3.23,7.82,3.23s5.66-1.08,7.81-3.23c2.15-2.16,3.23-5,3.23-7.83ZM397.28,130.4h24.26v-61.88h-24.26v61.88ZM641.86,111.89c0-4.76-1.88-9.09-5.89-12.44-7.98-6.07-20.31-7.07-23.99-8.48-2.37-.91-3.39-2.32-3.39-3.61,0-1.65,1.65-3.12,4.21-3.12,3.94,0,5.18,2.16,6.35,5.54l21.59-2.82c-3.29-11.79-13.04-20.26-28.25-20.26s-27.64,8.39-27.64,20.29c0,4.76,1.88,9.09,5.89,12.44,7.98,6.07,20.31,7.07,23.99,8.48,2.37.91,3.39,2.32,3.39,3.61,0,1.65-1.65,3.12-4.21,3.12-3.98,0-5.88-2.35-7.27-5.42l-22.86,2.68c3.29,11.79,15.22,20.27,30.43,20.27s27.64-8.39,27.64-20.29ZM565.31,99.45c0,18.09-14.66,32.75-32.75,32.75s-32.75-14.66-32.75-32.75,14.66-32.75,32.75-32.75,32.75,14.66,32.75,32.75ZM543.61,99.46c0-2.83-1.08-5.66-3.23-7.81-2.16-2.15-5-3.23-7.83-3.23s-5.66,1.08-7.81,3.23c-2.16,2.16-3.23,5-3.23,7.83s1.08,5.66,3.23,7.81c2.16,2.15,4.99,3.23,7.82,3.23s5.66-1.08,7.81-3.23c2.15-2.16,3.23-5,3.23-7.83ZM409.42,38.97c-3.25,0-6.5,1.24-8.98,3.72-2.48,2.47-3.72,5.72-3.72,8.97s1.24,6.5,3.72,8.98c2.47,2.48,5.72,3.72,8.97,3.72s6.5-1.24,8.98-3.72c2.48-2.47,3.72-5.72,3.72-8.97s-1.24-6.5-3.72-8.98c-2.47-2.48-5.72-3.72-8.97-3.72ZM493.99,90.1c-.47-12.8-10.79-23.03-23.6-23.4-.23,0-.47-.01-.7-.01-6.99,0-13.67,3.02-18.29,8.29l-6.46-6.46h-14.99v61.88h24.26v-33.11c0-4.29,3.48-7.76,7.76-7.76s7.76,3.48,7.76,7.76v33.11h24.26v-40.3h0ZM571.95,85.21c7.83-4.52,12.13-12.28,12.13-18.21,0-6.45-5.23-11.69-11.69-11.69s-11.7,5.26-11.7,11.69,5.24,11.7,11.7,11.7c.37,0,.73-.02,1.09-.05-.34,2.05-1.21,3.96-2.54,5.56l1.01,1.01Z"/>
+    <path class="cls-3" d="M174.89,45.47h-31.24v84.92h31.24c23.45,0,42.46-19.01,42.46-42.46s-19.01-42.46-42.46-42.46ZM173.56,107.36h-5.27v-38.84h5.27c10.73,0,19.42,8.7,19.42,19.42s-8.7,19.42-19.42,19.42ZM365,130.4v-34.59c0-3.15-2.56-5.71-5.71-5.71s-5.71,2.56-5.71,5.71v34.59h-24.26v-34.59c0-3.15-2.56-5.71-5.71-5.71s-5.71,2.56-5.71,5.71v34.59h-24.26v-61.88h14.99l6.46,6.46c3.96-5.17,10.08-8.23,16.59-8.29.07,0,.14,0,.21,0,6.31,0,12.29,2.81,16.31,7.68,4.48-4.9,10.81-7.67,17.42-7.67,12.96,0,23.48,10.46,23.58,23.41l.04,40.3h-24.26ZM287.5,99.45c0,18.09-14.66,32.75-32.75,32.75s-32.75-14.66-32.75-32.75,14.66-32.75,32.75-32.75,32.75,14.66,32.75,32.75ZM265.8,99.46c0-2.83-1.08-5.66-3.23-7.81-2.16-2.15-5-3.23-7.83-3.23s-5.66,1.08-7.81,3.23c-2.16,2.16-3.23,5-3.23,7.83s1.08,5.66,3.23,7.81c2.16,2.15,4.99,3.23,7.82,3.23s5.66-1.08,7.81-3.23c2.15-2.16,3.23-5,3.23-7.83ZM397.28,130.4h24.26v-61.88h-24.26v61.88ZM641.86,111.89c0-4.76-1.88-9.09-5.89-12.44-7.98-6.07-20.31-7.07-23.99-8.48-2.37-.91-3.39-2.32-3.39-3.61,0-1.65,1.65-3.12,4.21-3.12,3.94,0,5.18,2.16,6.35,5.54l21.59-2.82c-3.29-11.79-13.04-20.26-28.25-20.26s-27.64,8.39-27.64,20.29c0,4.76,1.88,9.09,5.89,12.44,7.98,6.07,20.31,7.07,23.99,8.48,2.37.91,3.39,2.32,3.39,3.61,0,1.65-1.65,3.12-4.21,3.12-3.98,0-5.88-2.35-7.27-5.42l-22.86,2.68c3.29,11.79,15.22,20.27,30.43,20.27s27.64-8.39,27.64-20.29ZM565.31,99.45c0,18.09-14.66,32.75-32.75,32.75s-32.75-14.66-32.75-32.75,14.66-32.75,32.75-32.75,32.75,14.66,32.75,32.75ZM543.61,99.46c0-2.83-1.08-5.66-3.23-7.81-2.16-2.15-5-3.23-7.83-3.23s-5.66,1.08-7.81,3.23c-2.16,2.16-3.23,5-3.23,7.83s1.08,5.66,3.23,7.81c2.16,2.15,4.99,3.23,7.82,3.23s5.66-1.08,7.81-3.23c2.15-2.16,3.23-5,3.23-7.83ZM409.42,38.97c-3.25,0-6.5,1.24-8.98,3.72-2.48,2.47-3.72,5.72-3.72,8.97s1.24,6.5,3.72,8.98c2.47,2.48,5.72,3.72,8.97,3.72s6.5-1.24,8.98-3.72c2.48-2.47,3.72-5.72,3.72-8.97s-1.24-6.5-3.72-8.98c-2.47-2.48-5.72-3.72-8.97-3.72ZM493.99,90.1c-.47-12.8-10.79-23.03-23.6-23.4-.23,0-.47-.01-.7-.01-6.99,0-13.67,3.02-18.29,8.29l-6.46-6.46h-14.99v61.88h24.26v-33.11c0-4.29,3.48-7.76,7.76-7.76s7.76,3.48,7.76,7.76v33.11h24.26v-40.3h0ZM571.95,85.21c7.83-4.52,12.13-12.28,12.13-18.21,0-6.45-5.23-11.69-11.69-11.69s-11.7,5.26-11.7,11.69,5.24,11.7,11.7,11.7c.37,0,.73-.02,1.09-.05-.34,2.05-1.21,3.96-2.54,5.56l1.01,1.01Z"/>
+  </g>
+  <g>
+    <path class="cls-1" d="M84.08,2.39l-39.56,39.56-2.57,2.57L2.39,84.08c-3.18,3.18-3.18,8.36,0,11.55l36.36,36.36c3.18,3.18,8.36,3.18,11.55,0l39.56-39.56,2.57-2.57,39.56-39.56c3.18-3.18,3.18-8.36,0-11.55L95.63,2.39c-3.18-3.18-8.36-3.18-11.55,0Z"/>
+    <path class="cls-2" d="M86.65,4.95l-39.56,39.56,42.77,42.77,39.56-39.56c1.77-1.77,1.77-4.64,0-6.42L93.06,4.95c-1.77-1.77-4.64-1.77-6.42,0ZM100.43,44.52c0,2.92-1.19,5.57-3.1,7.47-1.92,1.92-4.55,3.1-7.47,3.1-2.92,0-5.57-1.2-7.47-3.1-1.92-1.92-3.1-4.55-3.1-7.47,0-2.92,1.19-5.55,3.09-7.47,1.92-1.92,4.55-3.1,7.48-3.1s5.55,1.19,7.47,3.1c1.9,1.9,3.1,4.55,3.1,7.47Z"/>
+    <path class="cls-3" d="M4.95,86.65c-1.77,1.77-1.77,4.64,0,6.42l36.36,36.36c1.77,1.77,4.64,1.77,6.42,0l39.56-39.56-42.77-42.77L4.95,86.65ZM40.12,89.86c0,2.92-1.19,5.57-3.1,7.47-1.92,1.92-4.55,3.1-7.47,3.1-2.92,0-5.57-1.2-7.47-3.1s-3.1-4.55-3.1-7.47c0-2.92,1.19-5.55,3.09-7.47,1.92-1.92,4.55-3.1,7.48-3.1,2.92,0,5.55,1.19,7.47,3.1,1.9,1.9,3.1,4.55,3.1,7.47ZM70.07,89.84c0,2.92-1.19,5.57-3.1,7.47-1.92,1.92-4.55,3.1-7.47,3.1-2.92,0-5.57-1.2-7.47-3.1s-3.1-4.55-3.1-7.47c0-2.92,1.19-5.55,3.09-7.47,1.92-1.92,4.55-3.1,7.48-3.1,2.92,0,5.55,1.19,7.47,3.1,1.9,1.9,3.1,4.55,3.1,7.47Z"/>
+  </g>
+  <path class="cls-3" d="M635.16,66.74c0,3.23,2.56,5.58,5.58,5.58s5.55-2.36,5.55-5.58-2.56-5.55-5.55-5.55-5.58,2.36-5.58,5.55M640.74,71.43c-2.55,0-4.52-1.97-4.52-4.68s1.97-4.65,4.52-4.65,4.49,2,4.49,4.65-1.97,4.68-4.49,4.68ZM643.27,65.38c0-1.26-.74-1.83-2.25-1.83h-2.43v6.42h.98v-2.79h1.09l1.69,2.79h1.07l-1.81-2.82c.95-.12,1.66-.62,1.66-1.77ZM639.57,66.37v-2.01h1.32c1.11,0,1.41.35,1.41.96,0,.71-.39,1.05-1.57,1.05h-1.15Z"/>
+</svg>
+                    </div>
+                </div>
+                <p class="text-xs text-gray-500">Painel diário de controle de subida de vendas</p>
+            </div>
+            <div class="mt-4 md:mt-0 text-left md:text-right bg-white p-3 rounded-lg shadow-sm border border-gray-100">
+                <p class="text-xs text-gray-400">Última atualização</p>
+                <p class="text-sm font-semibold text-slate-800">30/08/2026 às 22:17:03</p>
+                <p class="text-xs text-gray-500 mt-1">Período analisado: <span class="font-medium text-slate-700">01/08/2026 a 29/08/2026</span></p>
+            </div>
+        </header>
+
+        <!-- Cards de Estatísticas -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+            <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <p class="text-xs font-semibold text-gray-400 uppercase tracking-wider">Total de Lojas Analisadas</p>
+                        <p class="text-3xl font-bold text-slate-950 mt-1">215</p>
+                    </div>
+                    <div class="p-3 bg-blue-50 text-blue-600 rounded-lg">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <p class="text-xs font-semibold text-gray-400 uppercase tracking-wider">Pendentes de Ontem (D-1)</p>
+                        <p class="text-3xl font-bold text-rose-600 mt-1">49</p>
+                    </div>
+                    <div class="p-3 bg-rose-50 text-rose-600 rounded-lg">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>
+                    </div>
+                </div>
+                <p class="text-xs text-gray-500 mt-2">Refere-se ao dia 29/08/2026</p>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <p class="text-xs font-semibold text-gray-400 uppercase tracking-wider">Pendentes no Mês Acumulado</p>
+                        <p class="text-3xl font-bold text-amber-600 mt-1">49</p>
+                    </div>
+                    <div class="p-3 bg-amber-50 text-amber-600 rounded-lg">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
+                    </div>
+                </div>
+                <p class="text-xs text-gray-500 mt-2">Total de lojas com algum dia faltante no mês</p>
+            </div>
+        </div>
+
+        <!-- Filtros Interativos -->
+        <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-4 mb-8 flex flex-col md:flex-row gap-4 items-center justify-between">
+            <div class="w-full md:w-1/3">
+                <label class="block text-xs font-semibold text-gray-400 uppercase mb-1">Buscar Loja</label>
+                <input type="text" id="searchInput" placeholder="Digite ID ou nome da loja..." class="w-full bg-gray-50 border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+            
+            <div class="w-full md:w-1/4">
+                <label class="block text-xs font-semibold text-gray-400 uppercase mb-1">Filtrar por Consultor</label>
+                <select id="consultantFilter" class="w-full bg-gray-50 border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <option value="ALL">Todos os Consultores</option>
+                    <option value="ALAN">ALAN</option><option value="ERICK APARECIDO">ERICK APARECIDO</option><option value="Erick">Erick</option><option value="FERNANDO NETO">FERNANDO NETO</option><option value="LEANDRO">LEANDRO</option><option value="MARÍLIA">MARÍLIA</option><option value="MUNIZ">MUNIZ</option><option value="MURILO">MURILO</option><option value="PRISCILA">PRISCILA</option><option value="Silvanira">Silvanira</option>
+                </select>
+            </div>
+
+            <div class="w-full md:w-1/4">
+                <label class="block text-xs font-semibold text-gray-400 uppercase mb-1">Filtrar por Tipo</label>
+                <select id="typeFilter" class="w-full bg-gray-50 border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <option value="ALL">Todos os Tipos</option>
+                    <option value="Franquia">Franquia</option>
+                    <option value="Própria">Própria</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Abas (Tabs) -->
+        <div class="mb-6 border-b border-gray-200 flex space-x-6">
+            <button id="tabD1Btn" class="pb-3 text-sm font-semibold border-b-2 border-blue-600 text-blue-600 focus:outline-none" onclick="switchTab('D1')">
+                Lojas Pendentes Ontem (D-1) <span class="ml-1.5 px-2 py-0.5 bg-rose-100 text-rose-800 text-xs rounded-full font-bold">49</span>
+            </button>
+            <button id="tabMonthBtn" class="pb-3 text-sm font-semibold border-b-2 border-transparent text-gray-500 hover:text-gray-700 focus:outline-none" onclick="switchTab('Month')">
+                Lojas Pendentes no Mês <span class="ml-1.5 px-2 py-0.5 bg-amber-100 text-amber-800 text-xs rounded-full font-bold">49</span>
+            </button>
+        </div>
+
+        <!-- Tabela D-1 -->
+        <div id="tableD1Container" class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
+            <table class="min-w-full divide-y divide-gray-200">
+                <thead class="bg-gray-50">
+                    <tr>
+                        <th class="px-6 py-3 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider">ID Loja</th>
+                        <th class="px-6 py-3 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider">Nome da Loja</th>
+                        <th class="px-6 py-3 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider">Consultor / Coordenador</th>
+                        <th class="px-6 py-3 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider">Tipo</th>
+                        <th class="px-6 py-3 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider">Atraso</th>
+                    </tr>
+                </thead>
+                <tbody id="tableD1Body" class="bg-white divide-y divide-gray-200 text-sm">
+                    <!-- Dinâmico -->
+                </tbody>
+            </table>
+            <div id="noDataD1" class="hidden p-8 text-center text-gray-500">Nenhuma loja pendente ontem.</div>
+        </div>
+
+        <!-- Tabela Mês -->
+        <div id="tableMonthContainer" class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden hidden">
+            <table class="min-w-full divide-y divide-gray-200">
+                <thead class="bg-gray-50">
+                    <tr>
+                        <th class="px-6 py-3 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider">ID Loja</th>
+                        <th class="px-6 py-3 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider">Nome da Loja</th>
+                        <th class="px-6 py-3 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider">Consultor / Coordenador</th>
+                        <th class="px-6 py-3 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider">Tipo</th>
+                        <th class="px-6 py-3 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider text-center">Dias sem Vendas</th>
+                    </tr>
+                </thead>
+                <tbody id="tableMonthBody" class="bg-white divide-y divide-gray-200 text-sm">
+                    <!-- Dinâmico -->
+                </tbody>
+            </table>
+            <div id="noDataMonth" class="hidden p-8 text-center text-gray-500">Nenhuma loja com pendência acumulada no mês.</div>
+        </div>
+
+    </div>
+
+    <!-- Script de Filtro -->
+    <script>
+        const d1Data = [{"id": "19507", "name": "FLAMENGO", "consultant": "Erick", "type": "Pr\u00f3pria"}, {"id": "19515", "name": "CATETE", "consultant": "Erick", "type": "Pr\u00f3pria"}, {"id": "19536", "name": "DOMINOS CACHAMBI", "consultant": "LEANDRO", "type": "Franquia"}, {"id": "19546", "name": "DOMINOS JUVEVE", "consultant": "ALAN", "type": "Franquia"}, {"id": "19562", "name": "PRADO", "consultant": "Silvanira", "type": "Pr\u00f3pria"}, {"id": "19565", "name": "DOMINOS GRACAS", "consultant": "FERNANDO NETO", "type": "Franquia"}, {"id": "19579", "name": "DOMINOS VILA ANDRADE", "consultant": "PRISCILA", "type": "Franquia"}, {"id": "19581", "name": "DOMINOS PRAIA DA COSTA", "consultant": "MUNIZ", "type": "Franquia"}, {"id": "19596", "name": "DOMINOS NOVA IGUACU", "consultant": "MUNIZ", "type": "Franquia"}, {"id": "19601", "name": "DOMINOS BOA VIAGEM", "consultant": "FERNANDO NETO", "type": "Franquia"}, {"id": "19602", "name": "DOMINOS CAMPO GRANDE", "consultant": "MURILO", "type": "Franquia"}, {"id": "19615", "name": "DOMINOS JUIZ DE FORA", "consultant": "LEANDRO", "type": "Franquia"}, {"id": "19618", "name": "DOMINOS MEIER", "consultant": "LEANDRO", "type": "Franquia"}, {"id": "19649", "name": "DOMINOS SETUBAL", "consultant": "FERNANDO NETO", "type": "Franquia"}, {"id": "19654", "name": "DOMINOS CASA FORTE", "consultant": "FERNANDO NETO", "type": "Franquia"}, {"id": "19657", "name": "DOMINOS CABO FRIO", "consultant": "MUNIZ", "type": "Franquia"}, {"id": "19661", "name": "DOMINOS LONDRINA", "consultant": "MUNIZ", "type": "Franquia"}, {"id": "19685", "name": "DOMINOS BONSUCESSO", "consultant": "MUNIZ", "type": "Franquia"}, {"id": "19693", "name": "DOMINOS JARDIM BOTANICO", "consultant": "MURILO", "type": "Franquia"}, {"id": "19694", "name": "DOMINOS BARRA MANSA", "consultant": "ALAN", "type": "Franquia"}, {"id": "19719", "name": "DOMINOS JARDIM CAMBURI (VITORIA 2)", "consultant": "MUNIZ", "type": "Franquia"}, {"id": "19722", "name": "DOMINOS LAGO NORTE", "consultant": "MURILO", "type": "Franquia"}, {"id": "19730", "name": "DOMINOS CUIABA", "consultant": "MURILO", "type": "Franquia"}, {"id": "19742", "name": "DOMINOS MANAUS", "consultant": "MAR\u00cdLIA", "type": "Franquia"}, {"id": "19753", "name": "DOMINOS CHACARA FLORA", "consultant": "ERICK APARECIDO", "type": "Franquia"}, {"id": "19754", "name": "DOMINOS GOIANIA 2", "consultant": "MURILO", "type": "Franquia"}, {"id": "19787", "name": "DOMINOS BOA VISTA", "consultant": "MURILO", "type": "Franquia"}, {"id": "19790", "name": "DOMINOS PIATA", "consultant": "FERNANDO NETO", "type": "Franquia"}, {"id": "19843", "name": "DOMINOS MANAUS 3", "consultant": "MAR\u00cdLIA", "type": "Franquia"}, {"id": "19863", "name": "VILA CLEMENTINO", "consultant": "ERICK APARECIDO", "type": "Franquia"}, {"id": "19897", "name": "DOMINOS PETROLINA", "consultant": "FERNANDO NETO", "type": "Franquia"}, {"id": "19910", "name": "DOMINOS LUIZ EDUARDO MAGALHAES CENTRO", "consultant": "FERNANDO NETO", "type": "Franquia"}, {"id": "19912", "name": "DOMINOS UBERABA", "consultant": "MUNIZ", "type": "Franquia"}, {"id": "19923", "name": "DOMINOS RIO MAR FORTALEZA", "consultant": "MAR\u00cdLIA", "type": "Franquia"}, {"id": "19927", "name": "DOMINOS GUARAPUAVA", "consultant": "ALAN", "type": "Franquia"}, {"id": "19930", "name": "DOMINOS SP BOTUCATU CENTRO", "consultant": "ERICK APARECIDO", "type": "Franquia"}, {"id": "19931", "name": "DOMINOS STELLA MARIS", "consultant": "FERNANDO NETO", "type": "Franquia"}, {"id": "19940", "name": "DOMINOS RN NATAL TIROL", "consultant": "MAR\u00cdLIA", "type": "Franquia"}, {"id": "19954", "name": "DOMINOS PARNA\u00cdBA", "consultant": "MAR\u00cdLIA", "type": "Franquia"}, {"id": "19957", "name": "DOMINOS AEROPORTO GUARULHOS", "consultant": "ERICK APARECIDO", "type": "Franquia"}, {"id": "19961", "name": "DOMINOS CORONEL FABRICIANO", "consultant": "LEANDRO", "type": "Franquia"}, {"id": "19962", "name": "DOMINOS ARARUAMA", "consultant": "MUNIZ", "type": "Franquia"}, {"id": "19964", "name": "DOMINO'S ITAIPAVA", "consultant": "LEANDRO", "type": "Franquia"}, {"id": "19965", "name": "DOMINOS BENTO GON\u00c7ALVES", "consultant": "ALAN", "type": "Franquia"}, {"id": "19966", "name": "DOMINOS SAO JOSE DOS CAMPOS", "consultant": "PRISCILA", "type": "Franquia"}, {"id": "19967", "name": "PAMPULHA", "consultant": "LEANDRO", "type": "Franquia"}, {"id": "19968", "name": "DOMINOS QUIOSQUE CH\u00c1CARA STO.ANT\u00d4NIO EVENTOS", "consultant": "PRISCILA", "type": "Franquia"}, {"id": "19972", "name": "DOMINOS LAGARTO", "consultant": "FERNANDO NETO", "type": "Franquia"}, {"id": "19975", "name": "N/A", "consultant": "N/A", "type": "N/A"}];
+        const monthData = [{"id": "19843", "name": "DOMINOS MANAUS 3", "consultant": "MAR\u00cdLIA", "type": "Franquia", "days": 29}, {"id": "19923", "name": "DOMINOS RIO MAR FORTALEZA", "consultant": "MAR\u00cdLIA", "type": "Franquia", "days": 29}, {"id": "19957", "name": "DOMINOS AEROPORTO GUARULHOS", "consultant": "ERICK APARECIDO", "type": "Franquia", "days": 29}, {"id": "19964", "name": "DOMINO'S ITAIPAVA", "consultant": "LEANDRO", "type": "Franquia", "days": 29}, {"id": "19965", "name": "DOMINOS BENTO GON\u00c7ALVES", "consultant": "ALAN", "type": "Franquia", "days": 29}, {"id": "19967", "name": "PAMPULHA", "consultant": "LEANDRO", "type": "Franquia", "days": 29}, {"id": "19968", "name": "DOMINOS QUIOSQUE CH\u00c1CARA STO.ANT\u00d4NIO EVENTOS", "consultant": "PRISCILA", "type": "Franquia", "days": 29}, {"id": "19972", "name": "DOMINOS LAGARTO", "consultant": "FERNANDO NETO", "type": "Franquia", "days": 29}, {"id": "19975", "name": "N/A", "consultant": "N/A", "type": "N/A", "days": 29}, {"id": "19562", "name": "PRADO", "consultant": "Silvanira", "type": "Pr\u00f3pria", "days": 22}, {"id": "19602", "name": "DOMINOS CAMPO GRANDE", "consultant": "MURILO", "type": "Franquia", "days": 10}, {"id": "19719", "name": "DOMINOS JARDIM CAMBURI (VITORIA 2)", "consultant": "MUNIZ", "type": "Franquia", "days": 10}, {"id": "19661", "name": "DOMINOS LONDRINA", "consultant": "MUNIZ", "type": "Franquia", "days": 6}, {"id": "19742", "name": "DOMINOS MANAUS", "consultant": "MAR\u00cdLIA", "type": "Franquia", "days": 5}, {"id": "19863", "name": "VILA CLEMENTINO", "consultant": "ERICK APARECIDO", "type": "Franquia", "days": 5}, {"id": "19685", "name": "DOMINOS BONSUCESSO", "consultant": "MUNIZ", "type": "Franquia", "days": 4}, {"id": "19693", "name": "DOMINOS JARDIM BOTANICO", "consultant": "MURILO", "type": "Franquia", "days": 4}, {"id": "19507", "name": "FLAMENGO", "consultant": "Erick", "type": "Pr\u00f3pria", "days": 3}, {"id": "19536", "name": "DOMINOS CACHAMBI", "consultant": "LEANDRO", "type": "Franquia", "days": 3}, {"id": "19618", "name": "DOMINOS MEIER", "consultant": "LEANDRO", "type": "Franquia", "days": 3}, {"id": "19962", "name": "DOMINOS ARARUAMA", "consultant": "MUNIZ", "type": "Franquia", "days": 3}, {"id": "19515", "name": "CATETE", "consultant": "Erick", "type": "Pr\u00f3pria", "days": 2}, {"id": "19579", "name": "DOMINOS VILA ANDRADE", "consultant": "PRISCILA", "type": "Franquia", "days": 2}, {"id": "19601", "name": "DOMINOS BOA VIAGEM", "consultant": "FERNANDO NETO", "type": "Franquia", "days": 2}, {"id": "19546", "name": "DOMINOS JUVEVE", "consultant": "ALAN", "type": "Franquia", "days": 1}, {"id": "19565", "name": "DOMINOS GRACAS", "consultant": "FERNANDO NETO", "type": "Franquia", "days": 1}, {"id": "19581", "name": "DOMINOS PRAIA DA COSTA", "consultant": "MUNIZ", "type": "Franquia", "days": 1}, {"id": "19596", "name": "DOMINOS NOVA IGUACU", "consultant": "MUNIZ", "type": "Franquia", "days": 1}, {"id": "19615", "name": "DOMINOS JUIZ DE FORA", "consultant": "LEANDRO", "type": "Franquia", "days": 1}, {"id": "19649", "name": "DOMINOS SETUBAL", "consultant": "FERNANDO NETO", "type": "Franquia", "days": 1}, {"id": "19654", "name": "DOMINOS CASA FORTE", "consultant": "FERNANDO NETO", "type": "Franquia", "days": 1}, {"id": "19657", "name": "DOMINOS CABO FRIO", "consultant": "MUNIZ", "type": "Franquia", "days": 1}, {"id": "19694", "name": "DOMINOS BARRA MANSA", "consultant": "ALAN", "type": "Franquia", "days": 1}, {"id": "19722", "name": "DOMINOS LAGO NORTE", "consultant": "MURILO", "type": "Franquia", "days": 1}, {"id": "19730", "name": "DOMINOS CUIABA", "consultant": "MURILO", "type": "Franquia", "days": 1}, {"id": "19753", "name": "DOMINOS CHACARA FLORA", "consultant": "ERICK APARECIDO", "type": "Franquia", "days": 1}, {"id": "19754", "name": "DOMINOS GOIANIA 2", "consultant": "MURILO", "type": "Franquia", "days": 1}, {"id": "19787", "name": "DOMINOS BOA VISTA", "consultant": "MURILO", "type": "Franquia", "days": 1}, {"id": "19790", "name": "DOMINOS PIATA", "consultant": "FERNANDO NETO", "type": "Franquia", "days": 1}, {"id": "19897", "name": "DOMINOS PETROLINA", "consultant": "FERNANDO NETO", "type": "Franquia", "days": 1}, {"id": "19910", "name": "DOMINOS LUIZ EDUARDO MAGALHAES CENTRO", "consultant": "FERNANDO NETO", "type": "Franquia", "days": 1}, {"id": "19912", "name": "DOMINOS UBERABA", "consultant": "MUNIZ", "type": "Franquia", "days": 1}, {"id": "19927", "name": "DOMINOS GUARAPUAVA", "consultant": "ALAN", "type": "Franquia", "days": 1}, {"id": "19930", "name": "DOMINOS SP BOTUCATU CENTRO", "consultant": "ERICK APARECIDO", "type": "Franquia", "days": 1}, {"id": "19931", "name": "DOMINOS STELLA MARIS", "consultant": "FERNANDO NETO", "type": "Franquia", "days": 1}, {"id": "19940", "name": "DOMINOS RN NATAL TIROL", "consultant": "MAR\u00cdLIA", "type": "Franquia", "days": 1}, {"id": "19954", "name": "DOMINOS PARNA\u00cdBA", "consultant": "MAR\u00cdLIA", "type": "Franquia", "days": 1}, {"id": "19961", "name": "DOMINOS CORONEL FABRICIANO", "consultant": "LEANDRO", "type": "Franquia", "days": 1}, {"id": "19966", "name": "DOMINOS SAO JOSE DOS CAMPOS", "consultant": "PRISCILA", "type": "Franquia", "days": 1}];
+        let currentTab = 'D1';
+
+        function switchTab(tab) {
+            currentTab = tab;
+            const tabD1Btn = document.getElementById('tabD1Btn');
+            const tabMonthBtn = document.getElementById('tabMonthBtn');
+            const tableD1 = document.getElementById('tableD1Container');
+            const tableMonth = document.getElementById('tableMonthContainer');
+
+            if (tab === 'D1') {
+                tabD1Btn.classList.add('border-blue-600', 'text-blue-600');
+                tabD1Btn.classList.remove('border-transparent', 'text-gray-500');
+                tabMonthBtn.classList.remove('border-blue-600', 'text-blue-600');
+                tabMonthBtn.classList.add('border-transparent', 'text-gray-500');
+                tableD1.classList.remove('hidden');
+                tableMonth.classList.add('hidden');
+            } else {
+                tabMonthBtn.classList.add('border-blue-600', 'text-blue-600');
+                tabMonthBtn.classList.remove('border-transparent', 'text-gray-500');
+                tabD1Btn.classList.remove('border-blue-600', 'text-blue-600');
+                tabD1Btn.classList.add('border-transparent', 'text-gray-500');
+                tableMonth.classList.remove('hidden');
+                tableD1.classList.add('hidden');
+            }
+            filterData();
+        }
+
+        function filterData() {
+            const query = document.getElementById('searchInput').value.toLowerCase().trim();
+            const consultant = document.getElementById('consultantFilter').value;
+            const type = document.getElementById('typeFilter').value;
+
+            if (currentTab === 'D1') {
+                const tbody = document.getElementById('tableD1Body');
+                tbody.innerHTML = '';
+                
+                const filtered = d1Data.filter(item => {
+                    const matchQuery = item.id.includes(query) || item.name.toLowerCase().includes(query);
+                    const matchConsultant = consultant === 'ALL' || item.consultant === consultant;
+                    const matchType = type === 'ALL' || item.type === type;
+                    return matchQuery && matchConsultant && matchType;
+                });
+
+                if (filtered.length === 0) {
+                    document.getElementById('noDataD1').classList.remove('hidden');
+                } else {
+                    document.getElementById('noDataD1').classList.add('hidden');
+                    filtered.forEach(item => {
+                        const tr = document.createElement('tr');
+                        tr.innerHTML = `
+                            <td class="px-6 py-4 whitespace-nowrap font-medium text-gray-900">${item.id}</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-gray-600">${item.name}</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-gray-600">${item.consultant}</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-xs">
+                                <span class="px-2.5 py-1 rounded-full font-semibold ${item.type === 'Própria' ? 'bg-indigo-50 text-indigo-700' : 'bg-orange-50 text-orange-700'}">${item.type}</span>
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap text-xs font-bold text-rose-600">
+                                <span class="bg-rose-50 px-2.5 py-1 rounded-lg">1 dia</span>
+                            </td>
+                        `;
+                        tbody.appendChild(tr);
+                    });
+                }
+            } else {
+                const tbody = document.getElementById('tableMonthBody');
+                tbody.innerHTML = '';
+                
+                const filtered = monthData.filter(item => {
+                    const matchQuery = item.id.includes(query) || item.name.toLowerCase().includes(query);
+                    const matchConsultant = consultant === 'ALL' || item.consultant === consultant;
+                    const matchType = type === 'ALL' || item.type === type;
+                    return matchQuery && matchConsultant && matchType;
+                });
+
+                if (filtered.length === 0) {
+                    document.getElementById('noDataMonth').classList.remove('hidden');
+                } else {
+                    document.getElementById('noDataMonth').classList.add('hidden');
+                    filtered.forEach(item => {
+                        // Determinar a cor com base nos dias em atraso
+                        const severityClass = item.days >= 5 ? 'text-red-700 bg-red-50' : (item.days >= 2 ? 'text-amber-700 bg-amber-50' : 'text-yellow-700 bg-yellow-50');
+                        tr = document.createElement('tr');
+                        tr.innerHTML = `
+                            <td class="px-6 py-4 whitespace-nowrap font-medium text-gray-900">${item.id}</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-gray-600">${item.name}</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-gray-600">${item.consultant}</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-xs">
+                                <span class="px-2.5 py-1 rounded-full font-semibold ${item.type === 'Própria' ? 'bg-indigo-50 text-indigo-700' : 'bg-orange-50 text-orange-700'}">${item.type}</span>
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap text-center text-xs font-bold">
+                                <span class="px-3 py-1 rounded-lg ${severityClass}">${item.days} dia(s)</span>
+                            </td>
+                        `;
+                        tbody.appendChild(tr);
+                    });
+                }
+            }
+        }
+
+        // Escutas de eventos para filtros
+        document.getElementById('searchInput').addEventListener('input', filterData);
+        document.getElementById('consultantFilter').addEventListener('change', filterData);
+        document.getElementById('typeFilter').addEventListener('change', filterData);
+
+        // Inicializar dados
+        filterData();
+    </script>
+</body>
+</html>

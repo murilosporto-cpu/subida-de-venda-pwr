@@ -1,0 +1,113 @@
+================================================================================
+RELATÓRIO DE VERIFICAÇÃO DE VENDAS PWR - 30/08/2026 22:17:03
+================================================================================
+Período Mensal Analisado: 01/08/2026 a 29/08/2026
+Data de Ontem (D-1): 29/08/2026
+Total de Lojas Analisadas: 215
+--------------------------------------------------------------------------------
+
+[MOVIMENTO 1] VERIFICAÇÃO DE ONTEM (D-1):
+-> ALERTA: 49 loja(s) NÃO subiram as vendas de ontem:
+   - Loja 19507 | FLAMENGO | Consultor: Erick | (Própria)
+   - Loja 19515 | CATETE | Consultor: Erick | (Própria)
+   - Loja 19536 | DOMINOS CACHAMBI | Consultor: LEANDRO | (Franquia)
+   - Loja 19546 | DOMINOS JUVEVE | Consultor: ALAN | (Franquia)
+   - Loja 19562 | PRADO | Consultor: Silvanira | (Própria)
+   - Loja 19565 | DOMINOS GRACAS | Consultor: FERNANDO NETO | (Franquia)
+   - Loja 19579 | DOMINOS VILA ANDRADE | Consultor: PRISCILA | (Franquia)
+   - Loja 19581 | DOMINOS PRAIA DA COSTA | Consultor: MUNIZ | (Franquia)
+   - Loja 19596 | DOMINOS NOVA IGUACU | Consultor: MUNIZ | (Franquia)
+   - Loja 19601 | DOMINOS BOA VIAGEM | Consultor: FERNANDO NETO | (Franquia)
+   - Loja 19602 | DOMINOS CAMPO GRANDE | Consultor: MURILO | (Franquia)
+   - Loja 19615 | DOMINOS JUIZ DE FORA | Consultor: LEANDRO | (Franquia)
+   - Loja 19618 | DOMINOS MEIER | Consultor: LEANDRO | (Franquia)
+   - Loja 19649 | DOMINOS SETUBAL | Consultor: FERNANDO NETO | (Franquia)
+   - Loja 19654 | DOMINOS CASA FORTE | Consultor: FERNANDO NETO | (Franquia)
+   - Loja 19657 | DOMINOS CABO FRIO | Consultor: MUNIZ | (Franquia)
+   - Loja 19661 | DOMINOS LONDRINA | Consultor: MUNIZ | (Franquia)
+   - Loja 19685 | DOMINOS BONSUCESSO | Consultor: MUNIZ | (Franquia)
+   - Loja 19693 | DOMINOS JARDIM BOTANICO | Consultor: MURILO | (Franquia)
+   - Loja 19694 | DOMINOS BARRA MANSA | Consultor: ALAN | (Franquia)
+   - Loja 19719 | DOMINOS JARDIM CAMBURI (VITORIA 2) | Consultor: MUNIZ | (Franquia)
+   - Loja 19722 | DOMINOS LAGO NORTE | Consultor: MURILO | (Franquia)
+   - Loja 19730 | DOMINOS CUIABA | Consultor: MURILO | (Franquia)
+   - Loja 19742 | DOMINOS MANAUS | Consultor: MARÍLIA | (Franquia)
+   - Loja 19753 | DOMINOS CHACARA FLORA | Consultor: ERICK APARECIDO | (Franquia)
+   - Loja 19754 | DOMINOS GOIANIA 2 | Consultor: MURILO | (Franquia)
+   - Loja 19787 | DOMINOS BOA VISTA | Consultor: MURILO | (Franquia)
+   - Loja 19790 | DOMINOS PIATA | Consultor: FERNANDO NETO | (Franquia)
+   - Loja 19843 | DOMINOS MANAUS 3 | Consultor: MARÍLIA | (Franquia)
+   - Loja 19863 | VILA CLEMENTINO | Consultor: ERICK APARECIDO | (Franquia)
+   - Loja 19897 | DOMINOS PETROLINA | Consultor: FERNANDO NETO | (Franquia)
+   - Loja 19910 | DOMINOS LUIZ EDUARDO MAGALHAES CENTRO | Consultor: FERNANDO NETO | (Franquia)
+   - Loja 19912 | DOMINOS UBERABA | Consultor: MUNIZ | (Franquia)
+   - Loja 19923 | DOMINOS RIO MAR FORTALEZA | Consultor: MARÍLIA | (Franquia)
+   - Loja 19927 | DOMINOS GUARAPUAVA | Consultor: ALAN | (Franquia)
+   - Loja 19930 | DOMINOS SP BOTUCATU CENTRO | Consultor: ERICK APARECIDO | (Franquia)
+   - Loja 19931 | DOMINOS STELLA MARIS | Consultor: FERNANDO NETO | (Franquia)
+   - Loja 19940 | DOMINOS RN NATAL TIROL | Consultor: MARÍLIA | (Franquia)
+   - Loja 19954 | DOMINOS PARNAÍBA | Consultor: MARÍLIA | (Franquia)
+   - Loja 19957 | DOMINOS AEROPORTO GUARULHOS | Consultor: ERICK APARECIDO | (Franquia)
+   - Loja 19961 | DOMINOS CORONEL FABRICIANO | Consultor: LEANDRO | (Franquia)
+   - Loja 19962 | DOMINOS ARARUAMA | Consultor: MUNIZ | (Franquia)
+   - Loja 19964 | DOMINO'S ITAIPAVA | Consultor: LEANDRO | (Franquia)
+   - Loja 19965 | DOMINOS BENTO GONÇALVES | Consultor: ALAN | (Franquia)
+   - Loja 19966 | DOMINOS SAO JOSE DOS CAMPOS | Consultor: PRISCILA | (Franquia)
+   - Loja 19967 | PAMPULHA | Consultor: LEANDRO | (Franquia)
+   - Loja 19968 | DOMINOS QUIOSQUE CHÁCARA STO.ANTÔNIO EVENTOS | Consultor: PRISCILA | (Franquia)
+   - Loja 19972 | DOMINOS LAGARTO | Consultor: FERNANDO NETO | (Franquia)
+   - Loja 19975 | N/A | Consultor: N/A | (N/A)
+
+[MOVIMENTO 2] VERIFICAÇÃO ACUMULADA DO MÊS (Dia 1 até Ontem):
+-> ALERTA: 49 loja(s) possuem dias sem vendas acumulados no mês:
+   - Loja 19843 | DOMINOS MANAUS 3 | Consultor: MARÍLIA | (Franquia) -> 29 dia(s) sem subir vendas
+   - Loja 19923 | DOMINOS RIO MAR FORTALEZA | Consultor: MARÍLIA | (Franquia) -> 29 dia(s) sem subir vendas
+   - Loja 19957 | DOMINOS AEROPORTO GUARULHOS | Consultor: ERICK APARECIDO | (Franquia) -> 29 dia(s) sem subir vendas
+   - Loja 19964 | DOMINO'S ITAIPAVA | Consultor: LEANDRO | (Franquia) -> 29 dia(s) sem subir vendas
+   - Loja 19965 | DOMINOS BENTO GONÇALVES | Consultor: ALAN | (Franquia) -> 29 dia(s) sem subir vendas
+   - Loja 19967 | PAMPULHA | Consultor: LEANDRO | (Franquia) -> 29 dia(s) sem subir vendas
+   - Loja 19968 | DOMINOS QUIOSQUE CHÁCARA STO.ANTÔNIO EVENTOS | Consultor: PRISCILA | (Franquia) -> 29 dia(s) sem subir vendas
+   - Loja 19972 | DOMINOS LAGARTO | Consultor: FERNANDO NETO | (Franquia) -> 29 dia(s) sem subir vendas
+   - Loja 19975 | N/A | Consultor: N/A | (N/A) -> 29 dia(s) sem subir vendas
+   - Loja 19562 | PRADO | Consultor: Silvanira | (Própria) -> 22 dia(s) sem subir vendas
+   - Loja 19602 | DOMINOS CAMPO GRANDE | Consultor: MURILO | (Franquia) -> 10 dia(s) sem subir vendas
+   - Loja 19719 | DOMINOS JARDIM CAMBURI (VITORIA 2) | Consultor: MUNIZ | (Franquia) -> 10 dia(s) sem subir vendas
+   - Loja 19661 | DOMINOS LONDRINA | Consultor: MUNIZ | (Franquia) -> 6 dia(s) sem subir vendas
+   - Loja 19742 | DOMINOS MANAUS | Consultor: MARÍLIA | (Franquia) -> 5 dia(s) sem subir vendas
+   - Loja 19863 | VILA CLEMENTINO | Consultor: ERICK APARECIDO | (Franquia) -> 5 dia(s) sem subir vendas
+   - Loja 19685 | DOMINOS BONSUCESSO | Consultor: MUNIZ | (Franquia) -> 4 dia(s) sem subir vendas
+   - Loja 19693 | DOMINOS JARDIM BOTANICO | Consultor: MURILO | (Franquia) -> 4 dia(s) sem subir vendas
+   - Loja 19507 | FLAMENGO | Consultor: Erick | (Própria) -> 3 dia(s) sem subir vendas
+   - Loja 19536 | DOMINOS CACHAMBI | Consultor: LEANDRO | (Franquia) -> 3 dia(s) sem subir vendas
+   - Loja 19618 | DOMINOS MEIER | Consultor: LEANDRO | (Franquia) -> 3 dia(s) sem subir vendas
+   - Loja 19962 | DOMINOS ARARUAMA | Consultor: MUNIZ | (Franquia) -> 3 dia(s) sem subir vendas
+   - Loja 19515 | CATETE | Consultor: Erick | (Própria) -> 2 dia(s) sem subir vendas
+   - Loja 19579 | DOMINOS VILA ANDRADE | Consultor: PRISCILA | (Franquia) -> 2 dia(s) sem subir vendas
+   - Loja 19601 | DOMINOS BOA VIAGEM | Consultor: FERNANDO NETO | (Franquia) -> 2 dia(s) sem subir vendas
+   - Loja 19546 | DOMINOS JUVEVE | Consultor: ALAN | (Franquia) -> 1 dia(s) sem subir vendas
+   - Loja 19565 | DOMINOS GRACAS | Consultor: FERNANDO NETO | (Franquia) -> 1 dia(s) sem subir vendas
+   - Loja 19581 | DOMINOS PRAIA DA COSTA | Consultor: MUNIZ | (Franquia) -> 1 dia(s) sem subir vendas
+   - Loja 19596 | DOMINOS NOVA IGUACU | Consultor: MUNIZ | (Franquia) -> 1 dia(s) sem subir vendas
+   - Loja 19615 | DOMINOS JUIZ DE FORA | Consultor: LEANDRO | (Franquia) -> 1 dia(s) sem subir vendas
+   - Loja 19649 | DOMINOS SETUBAL | Consultor: FERNANDO NETO | (Franquia) -> 1 dia(s) sem subir vendas
+   - Loja 19654 | DOMINOS CASA FORTE | Consultor: FERNANDO NETO | (Franquia) -> 1 dia(s) sem subir vendas
+   - Loja 19657 | DOMINOS CABO FRIO | Consultor: MUNIZ | (Franquia) -> 1 dia(s) sem subir vendas
+   - Loja 19694 | DOMINOS BARRA MANSA | Consultor: ALAN | (Franquia) -> 1 dia(s) sem subir vendas
+   - Loja 19722 | DOMINOS LAGO NORTE | Consultor: MURILO | (Franquia) -> 1 dia(s) sem subir vendas
+   - Loja 19730 | DOMINOS CUIABA | Consultor: MURILO | (Franquia) -> 1 dia(s) sem subir vendas
+   - Loja 19753 | DOMINOS CHACARA FLORA | Consultor: ERICK APARECIDO | (Franquia) -> 1 dia(s) sem subir vendas
+   - Loja 19754 | DOMINOS GOIANIA 2 | Consultor: MURILO | (Franquia) -> 1 dia(s) sem subir vendas
+   - Loja 19787 | DOMINOS BOA VISTA | Consultor: MURILO | (Franquia) -> 1 dia(s) sem subir vendas
+   - Loja 19790 | DOMINOS PIATA | Consultor: FERNANDO NETO | (Franquia) -> 1 dia(s) sem subir vendas
+   - Loja 19897 | DOMINOS PETROLINA | Consultor: FERNANDO NETO | (Franquia) -> 1 dia(s) sem subir vendas
+   - Loja 19910 | DOMINOS LUIZ EDUARDO MAGALHAES CENTRO | Consultor: FERNANDO NETO | (Franquia) -> 1 dia(s) sem subir vendas
+   - Loja 19912 | DOMINOS UBERABA | Consultor: MUNIZ | (Franquia) -> 1 dia(s) sem subir vendas
+   - Loja 19927 | DOMINOS GUARAPUAVA | Consultor: ALAN | (Franquia) -> 1 dia(s) sem subir vendas
+   - Loja 19930 | DOMINOS SP BOTUCATU CENTRO | Consultor: ERICK APARECIDO | (Franquia) -> 1 dia(s) sem subir vendas
+   - Loja 19931 | DOMINOS STELLA MARIS | Consultor: FERNANDO NETO | (Franquia) -> 1 dia(s) sem subir vendas
+   - Loja 19940 | DOMINOS RN NATAL TIROL | Consultor: MARÍLIA | (Franquia) -> 1 dia(s) sem subir vendas
+   - Loja 19954 | DOMINOS PARNAÍBA | Consultor: MARÍLIA | (Franquia) -> 1 dia(s) sem subir vendas
+   - Loja 19961 | DOMINOS CORONEL FABRICIANO | Consultor: LEANDRO | (Franquia) -> 1 dia(s) sem subir vendas
+   - Loja 19966 | DOMINOS SAO JOSE DOS CAMPOS | Consultor: PRISCILA | (Franquia) -> 1 dia(s) sem subir vendas
+
+================================================================================
