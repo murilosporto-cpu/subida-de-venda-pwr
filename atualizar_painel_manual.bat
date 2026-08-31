@@ -1,9 +1,9 @@
 @echo off
-:: Navega para o diretório do projeto
-cd /d "%~dp0"
+:: Navega para a pasta do sistema
+cd /d "%~dp0sistema"
 
 :: Executa a automação local
-.venv\Scripts\python scripts\check_pwr.py --local
+.venv\Scripts\python check_pwr.py --local
 
 echo.
 echo ============================================================

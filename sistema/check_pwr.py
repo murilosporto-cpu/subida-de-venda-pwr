@@ -19,8 +19,8 @@ log_level = getattr(logging, log_level_str, logging.INFO)
 os.makedirs("logs", exist_ok=True)
 os.makedirs("logs/screenshots", exist_ok=True)
 os.makedirs("reports", exist_ok=True)
-os.makedirs("novos arquivos", exist_ok=True)
-os.makedirs("arquivos processados", exist_ok=True)
+os.makedirs("../novos arquivos", exist_ok=True)
+os.makedirs("../arquivos processados", exist_ok=True)
 
 logging.basicConfig(
     level=log_level,
@@ -748,8 +748,8 @@ def run_local_processing():
     """
     logging.info("Iniciando processamento manual com arquivos locais...")
     
-    path_ontem = os.path.join("novos arquivos", "ontem.xlsx")
-    path_mes = os.path.join("novos arquivos", "mes.xlsx")
+    path_ontem = os.path.join("..", "novos arquivos", "ontem.xlsx")
+    path_mes = os.path.join("..", "novos arquivos", "mes.xlsx")
     
     if not os.path.exists(path_ontem) or not os.path.exists(path_mes):
         logging.error("Erro: Arquivos 'ontem.xlsx' e/ou 'mes.xlsx' não encontrados na pasta 'novos arquivos'!")
@@ -834,8 +834,8 @@ def run_local_processing():
     
     # Mover arquivos para processados com timestamp
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-    dest_ontem = os.path.join("arquivos processados", f"ontem_{timestamp}.xlsx")
-    dest_mes = os.path.join("arquivos processados", f"mes_{timestamp}.xlsx")
+    dest_ontem = os.path.join("..", "arquivos processados", f"ontem_{timestamp}.xlsx")
+    dest_mes = os.path.join("..", "arquivos processados", f"mes_{timestamp}.xlsx")
     
     try:
         import shutil
