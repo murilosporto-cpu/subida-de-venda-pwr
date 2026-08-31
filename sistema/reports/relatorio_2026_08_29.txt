@@ -1,13 +1,13 @@
 ================================================================================
-RELATÓRIO DE VERIFICAÇÃO DE VENDAS PWR - 30/08/2026 22:56:36
+RELATÓRIO DE VERIFICAÇÃO DE VENDAS PWR - 30/08/2026 23:08:41
 ================================================================================
 Período Mensal Analisado: 01/08/2026 a 29/08/2026
 Data de Ontem (D-1): 29/08/2026
-Total de Lojas Analisadas: 215
+Total de Lojas Analisadas: 207
 --------------------------------------------------------------------------------
 
 [MOVIMENTO 1] VERIFICAÇÃO DE ONTEM (D-1):
--> ALERTA: 49 loja(s) NÃO subiram as vendas de ontem:
+-> ALERTA: 41 loja(s) NÃO subiram as vendas de ontem:
    - Loja 19507 | FLAMENGO | Consultor: Erick | (Própria)
    - Loja 19515 | CATETE | Consultor: Erick | (Própria)
    - Loja 19536 | DOMINOS CACHAMBI | Consultor: LEANDRO | (Franquia)
@@ -41,34 +41,18 @@ Total de Lojas Analisadas: 215
    - Loja 19897 | DOMINOS PETROLINA | Consultor: FERNANDO NETO | (Franquia)
    - Loja 19910 | DOMINOS LUIZ EDUARDO MAGALHAES CENTRO | Consultor: FERNANDO NETO | (Franquia)
    - Loja 19912 | DOMINOS UBERABA | Consultor: MUNIZ | (Franquia)
-   - Loja 19923 | DOMINOS RIO MAR FORTALEZA | Consultor: MARÍLIA | (Franquia)
    - Loja 19927 | DOMINOS GUARAPUAVA | Consultor: ALAN | (Franquia)
    - Loja 19930 | DOMINOS SP BOTUCATU CENTRO | Consultor: ERICK APARECIDO | (Franquia)
    - Loja 19931 | DOMINOS STELLA MARIS | Consultor: FERNANDO NETO | (Franquia)
    - Loja 19940 | DOMINOS RN NATAL TIROL | Consultor: MARÍLIA | (Franquia)
    - Loja 19954 | DOMINOS PARNAÍBA | Consultor: MARÍLIA | (Franquia)
-   - Loja 19957 | DOMINOS AEROPORTO GUARULHOS | Consultor: ERICK APARECIDO | (Franquia)
    - Loja 19961 | DOMINOS CORONEL FABRICIANO | Consultor: LEANDRO | (Franquia)
    - Loja 19962 | DOMINOS ARARUAMA | Consultor: MUNIZ | (Franquia)
-   - Loja 19964 | DOMINO'S ITAIPAVA | Consultor: LEANDRO | (Franquia)
-   - Loja 19965 | DOMINOS BENTO GONÇALVES | Consultor: ALAN | (Franquia)
    - Loja 19966 | DOMINOS SAO JOSE DOS CAMPOS | Consultor: PRISCILA | (Franquia)
-   - Loja 19967 | PAMPULHA | Consultor: LEANDRO | (Franquia)
-   - Loja 19968 | DOMINOS QUIOSQUE CHÁCARA STO.ANTÔNIO EVENTOS | Consultor: PRISCILA | (Franquia)
-   - Loja 19972 | DOMINOS LAGARTO | Consultor: FERNANDO NETO | (Franquia)
-   - Loja 19975 | N/A | Consultor: N/A | (N/A)
 
 [MOVIMENTO 2] VERIFICAÇÃO ACUMULADA DO MÊS (Dia 1 até Ontem):
--> ALERTA: 49 loja(s) possuem dias sem vendas acumulados no mês:
+-> ALERTA: 41 loja(s) possuem dias sem vendas acumulados no mês:
    - Loja 19843 | DOMINOS MANAUS 3 | Consultor: MARÍLIA | (Franquia) -> 29 dia(s) sem subir vendas
-   - Loja 19923 | DOMINOS RIO MAR FORTALEZA | Consultor: MARÍLIA | (Franquia) -> 29 dia(s) sem subir vendas
-   - Loja 19957 | DOMINOS AEROPORTO GUARULHOS | Consultor: ERICK APARECIDO | (Franquia) -> 29 dia(s) sem subir vendas
-   - Loja 19964 | DOMINO'S ITAIPAVA | Consultor: LEANDRO | (Franquia) -> 29 dia(s) sem subir vendas
-   - Loja 19965 | DOMINOS BENTO GONÇALVES | Consultor: ALAN | (Franquia) -> 29 dia(s) sem subir vendas
-   - Loja 19967 | PAMPULHA | Consultor: LEANDRO | (Franquia) -> 29 dia(s) sem subir vendas
-   - Loja 19968 | DOMINOS QUIOSQUE CHÁCARA STO.ANTÔNIO EVENTOS | Consultor: PRISCILA | (Franquia) -> 29 dia(s) sem subir vendas
-   - Loja 19972 | DOMINOS LAGARTO | Consultor: FERNANDO NETO | (Franquia) -> 29 dia(s) sem subir vendas
-   - Loja 19975 | N/A | Consultor: N/A | (N/A) -> 29 dia(s) sem subir vendas
    - Loja 19562 | PRADO | Consultor: Silvanira | (Própria) -> 22 dia(s) sem subir vendas
    - Loja 19602 | DOMINOS CAMPO GRANDE | Consultor: MURILO | (Franquia) -> 10 dia(s) sem subir vendas
    - Loja 19719 | DOMINOS JARDIM CAMBURI (VITORIA 2) | Consultor: MUNIZ | (Franquia) -> 10 dia(s) sem subir vendas
