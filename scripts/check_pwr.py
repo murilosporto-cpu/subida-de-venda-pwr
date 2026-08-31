@@ -11,9 +11,16 @@ from playwright.async_api import async_playwright
 load_dotenv()
 
 # Configuração de Logs
-log_file = os.getenv("LOG_FILE", "pwr_sales_check.log")
+log_file = os.getenv("LOG_FILE", "logs/pwr_sales_check.log")
 log_level_str = os.getenv("LOG_LEVEL", "INFO").upper()
 log_level = getattr(logging, log_level_str, logging.INFO)
+
+# Cria pastas necessárias
+os.makedirs("logs", exist_ok=True)
+os.makedirs("logs/screenshots", exist_ok=True)
+os.makedirs("reports", exist_ok=True)
+os.makedirs("novos arquivos", exist_ok=True)
+os.makedirs("arquivos processados", exist_ok=True)
 
 logging.basicConfig(
     level=log_level,
@@ -24,12 +31,6 @@ logging.basicConfig(
     ]
 )
 
-# Cria pastas necessárias
-os.makedirs("screenshots", exist_ok=True)
-os.makedirs("reports", exist_ok=True)
-os.makedirs("novos arquivos", exist_ok=True)
-os.makedirs("arquivos processados", exist_ok=True)
-
 # Credenciais e Configurações
 USER = os.getenv("DOMINOS_PWR_USER")
 PASSWORD = os.getenv("DOMINOS_PWR_PASSWORD")
@@ -39,9 +40,9 @@ HEADLESS = HEADLESS_STR == "true"
 def load_store_mappings():
     """
     Carrega o mapeamento de ID de loja para Nome da Loja, Consultor e Tipo (Franquia/Própria)
-    a partir das planilhas Excel presentes na pasta 'lojas com id nome e consultor'.
+    a partir das planilhas Excel presentes na pasta 'dados_lojas'.
     """
-    folder = "lojas com id nome e consultor"
+    folder = "dados_lojas"
     mapping = {}
     
     # 1. Ler lojas próprias
@@ -592,7 +593,7 @@ async def run_automation():
                 if await page.locator("#errorLabel").is_visible():
                     error_msg = await page.locator("#errorLabel").inner_text()
                 logging.error(f"Erro no login: '{error_msg}'")
-                await page.screenshot(path="screenshots/erro_login.png")
+                await page.screenshot(path="logs/screenshots/erro_login.png")
                 return False
                 
             logging.info("Login bem-sucedido!")
@@ -611,7 +612,7 @@ async def run_automation():
             
             # --- MOVIMENTO 1: Verificar ontem (D-1) ---
             logging.info("MOVIMENTO 1: Analisando vendas de ontem (D-1)...")
-            await page.screenshot(path="screenshots/02_keys_summary_ontem.png")
+            await page.screenshot(path="logs/screenshots/02_keys_summary_ontem.png")
             
             yesterday_data = await parse_main_table(page)
             if yesterday_data is None:
@@ -654,7 +655,7 @@ async def run_automation():
             logging.info("Aguardando recarregamento da tabela de vendas...")
             await wait_for_loading_to_finish(page)
             
-            await page.screenshot(path="screenshots/03_keys_summary_mes.png")
+            await page.screenshot(path="logs/screenshots/03_keys_summary_mes.png")
             
             monthly_data = await parse_main_table(page)
             if monthly_data is None:
@@ -715,7 +716,7 @@ async def run_automation():
         except Exception as e:
             logging.error(f"Erro na execução da automação: {e}", exc_info=True)
             try:
-                await page.screenshot(path="screenshots/erro_execucao.png")
+                await page.screenshot(path="logs/screenshots/erro_execucao.png")
             except:
                 pass
             return False

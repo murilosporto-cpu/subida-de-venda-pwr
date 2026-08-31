@@ -15,12 +15,8 @@ pwr_sales_check.log
 __pycache__/
 *.pyc
 
-# Capturas de tela locais
-screenshots/
-erro_execucao.png
-erro_login.png
-login_page.png
-login_page.html
+# Logs e capturas de tela
+logs/
 
 # IDEs
 .vscode/

@@ -3,7 +3,7 @@
 cd /d "%~dp0"
 
 :: Executa a automação local
-.venv\Scripts\python check_pwr.py --local
+.venv\Scripts\python scripts\check_pwr.py --local
 
 echo.
 echo ============================================================
